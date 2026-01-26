@@ -1,0 +1,75 @@
+#pragma once
+
+#include "constants.h"
+
+namespace neat_dnfs
+{
+	enum class FieldGeneType
+	{
+		INPUT = 1,
+		OUTPUT = 2,
+		HIDDEN = 3
+	};
+
+	struct FieldGeneParameters
+	{
+		FieldGeneType type;
+		int id;
+
+		FieldGeneParameters(const FieldGeneParameters& other) = default;
+		FieldGeneParameters(FieldGeneType type, int id);
+
+		bool operator==(const FieldGeneParameters& other) const;
+		std::string toString() const;
+		void print() const;
+	};
+
+	class FieldGene
+	{
+	private:
+		FieldGeneParameters parameters;
+		NeuralFieldPtr neuralField;
+		KernelPtr kernel;
+		NormalNoisePtr noise;
+		std::string mutationsInLastGeneration;
+	public:
+		explicit FieldGene(const FieldGeneParameters& parameters,
+		                   const dnf_composer::element::ElementDimensions& dimensions = {100, 1.0});
+		FieldGene(const FieldGeneParameters& parameters,
+			const NeuralFieldPtr& neuralField, 
+			KernelPtr kernel);
+		FieldGene(const FieldGeneParameters& parameters, const FieldGene& other);
+
+		void setAsInput(const dnf_composer::element::ElementDimensions& dimensions);
+		void setAsOutput(const dnf_composer::element::ElementDimensions& dimensions);
+		void setAsHidden(const dnf_composer::element::ElementDimensions& dimensions);
+
+		void mutate();
+		void clearLastMutations();
+
+		FieldGeneParameters getParameters() const;
+		std::string getMutationsInLastGeneration() const;
+		std::shared_ptr<dnf_composer::element::NeuralField> getNeuralField() const;
+		std::shared_ptr<dnf_composer::element::Kernel> getKernel() const;
+		std::shared_ptr<dnf_composer::element::NormalNoise> getNoise() const;
+
+		bool operator==(const FieldGene&) const;
+		bool isCloneOf(const FieldGene&) const;
+		std::string toString() const;
+		void print() const;
+		FieldGene clone() const;
+	private:
+		void initializeNeuralField(const dnf_composer::element::ElementDimensions& dimensions);
+		void initializeKernel(const dnf_composer::element::ElementDimensions& dimensions);
+		void initializeGaussKernel(const dnf_composer::element::ElementDimensions& dimensions);
+		void initializeMexicanHatKernel(const dnf_composer::element::ElementDimensions& dimensions);
+		void initializeNoise(const dnf_composer::element::ElementDimensions& dimensions);
+
+		void mutateKernel();
+		void mutateGaussKernel();
+		void mutateMexicanHatKernel();
+
+		void mutateKernelType();
+		void mutateNeuralField();
+	};
+}
