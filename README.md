@@ -208,8 +208,21 @@ neat-dnfs/
 
 ---
 
+## Video explanation
+
+[![Watch the video](https://img.youtube.com/vi/2QaL6OVnpkY/maxresdefault.jpg)](https://youtu.be/2QaL6OVnpkY)
+
+---
+
+## Documentation
+
+For a full exploration of the repository, refer to the Wiki.
+
+---
+
 ## References
 
 * Stanley & Miikkulainen (2002) — NEAT
 * Erlhagen & Bicho (2006, 2014) — Dynamic Neural Field Theory
 * Schöner & Spencer (2015) — *Dynamic Thinking*
+
