@@ -193,7 +193,7 @@ neat-dnfs/
 │   ├── neat/          # Core NEAT-DNF implementation
 │   ├── solutions/     # Task definitions
 │   ├── tools/         # Logging and utilities
-│   └── constants.h
+│   └── constants.h    # Hyperparameter definition
 ├── src/
 ├── examples/
 ├── tests/
@@ -228,6 +228,7 @@ For a full exploration of the repository, refer to the Wiki.
 * Erlhagen, Wolfram and Bicho, Estela (2014) - "A Dynamic Neural Field Approach to Natural and Efficient Human-Robot Collaboration"
 * Pfeifer, Rolf and Bongard, Josh (2006) - "How the Body Shapes the Way We Think: A New View of Intelligence"
 * Coombes, Stephen and Beim Graben, Peter and Potthast, Roland and Wright, James (2014) - "Neural fields: theory and applications"
+
 
 
 
