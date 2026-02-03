@@ -181,11 +181,7 @@ All data are stored in the `data/` directory.
 * **Genome and mutation statistics**
 * **Architectural complexity tracking**
 
-### Interactive Visualisations
-
-* **Fitness evolution dashboards**
-* **Species trees and phylogenies**
-* **Genome lineage and innovation tracking**
+Run the `launch-visualizer.bat` to open a Streamlit app, and then select the experiment directory.
 
 ---
 
@@ -220,10 +216,18 @@ For a full exploration of the repository, refer to the Wiki.
 
 ---
 
-## References
+## Main inspiration for this work
 
-* Stanley & Miikkulainen (2002) — NEAT
-* Erlhagen & Bicho (2006, 2014) — Dynamic Neural Field Theory
-* Schöner & Spencer (2015) — *Dynamic Thinking*
+* Amari, Shun-ichi (1977) - "Dynamics of pattern formation in lateral-inhibition type neural fields"
+* Schöner, Gregor and Spencer, John and Research Group, Dft (2015) - "Dynamic Thinking: A Primer on Dynamic Field Theory"
+* Nolfi, Stefano and Floreano, Dario (2000) - "Evolutionary robotics: the biology, intelligence, and technology of self-organizing machines"
+* Floreano, Dario (2023) - "Bio-Inspired Artificial Intelligence: Theories, Methods, and Technologies"
+* Erlhagen, Wolfram and Bicho, Estela (2006) - "The dynamic neural field approach to cognitive robotics"
+* Krichmar, Jeffrey L. (2018) - "Neurorobotics — A Thriving Community and a Promising Pathway Toward Intelligent Cognitive Robots"
+* Stanley, Kenneth O. and Miikkulainen, Risto (2002) - "Evolving Neural Networks through Augmenting Topologies"
+* Erlhagen, Wolfram and Bicho, Estela (2014) - "A Dynamic Neural Field Approach to Natural and Efficient Human-Robot Collaboration"
+* Pfeifer, Rolf and Bongard, Josh (2006) - "How the Body Shapes the Way We Think: A New View of Intelligence"
+* Coombes, Stephen and Beim Graben, Peter and Potthast, Roland and Wright, James (2014) - "Neural fields: theory and applications"
+
 
 
